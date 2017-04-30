@@ -1,0 +1,43 @@
+<html>
+ <head>
+  <title>Session Test</title>
+ </head>
+<body>
+ <input type="text" value="foo">
+ 
+ <input id="myradio" type="radio" checked="checked">
+ 
+ <input id="mybutton" type="button" value="click!">
+
+ <select id="single-select">
+  <option value="r">Red</option>
+  <option value="g">Green</option>
+  <option value="b">Blue</option>
+ </select>
+
+ <select id="multi-select" multiple="multiple">
+  <option value="r">hello</option>
+  <option value="g">world</option>
+ </select>
+
+ <p>hello, world!</p>
+
+  <script>
+  document.querySelector("select").selectedIndex = -1;
+
+   document.querySelector("#mybutton").addEventListener('click', function(e) {
+       console.info("clicked");
+   }, false);
+
+   document.querySelector("[type=text]").addEventListener('focus', function(e) {
+       console.info("focused");
+   });
+
+  var myfunc = function() {
+      
+  };
+
+  </script>
+ 
+</body>
+</html>

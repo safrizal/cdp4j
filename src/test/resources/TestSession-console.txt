@@ -1,0 +1,37 @@
+invoked(navigate)
+activate()
+getTitle(): Session Test
+getAttribute("[type=text]", "value"): foo
+setAttribute("[type=text]", "value", "bar")
+getAttribute("[type=text]", "value"): bar
+setAttribute("[type=text]", "my-attr", "my-value")
+getAttribute("[type=text]", "my-attr"): my-value
+isChecked("#myradio"): true
+setChecked("#myradio", "false")
+isChecked("#myradio"): false
+click("#mybutton")
+focus("[type=text]")
+selectInputText("[type=text]")
+sendBackspace()
+sendKeys("hello")
+getProperty("[type=text]", "value"): hello
+stop()
+reload()
+evaluate("2 + 2"): 4.0
+getSelectedIndex("#single-select"): -1
+setSelectedIndex("#single-select", "1")
+getSelectedIndex("#single-select"): 1
+clearOptions("#single-select")
+getSelectedIndex("#single-select"): -1
+setSelectOptions("#multi-select", "[1]")
+getProperty("p:contains('hello')", "innerHTML"): hello, world!
+setProperty("//p", "innerHTML", "hi")
+getProperty("p:contains('hi')", "innerHTML"): hi
+setDisabled("[type=text]", "true")
+isDisabled("[type=text]"): true
+focus("[type=text]")
+userAgent("my browser")
+evaluate("navigator.userAgent"): my browser
+callFunction("myfunc"): void
+close()
+close()
