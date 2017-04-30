@@ -18,7 +18,7 @@ Features
 * Full page screen capture
 * Trigger Mouse events (click etc...)
 * Send keys (text, tab, enter etc...)
-* Redirect Browser's log entries (javascript, network, storage etc...) to slf4j
+* Redirect log entries (javascript, network, storage etc...) from browser to slf4j
 * Intercept Network (request & response)
 * Upload file programmatically without third party solutions (does not requires AWT Robot etc...)
 * get & set Element properties
