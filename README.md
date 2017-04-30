@@ -80,7 +80,7 @@ cdp4j has been tested under Windows 10 and Ubuntu, but should work on any platfo
 
 Headless Mode
 -------------
-Ui4j can be run in "headless" mode using with [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md).
+cdp4j can be run in "headless" mode using with [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md).
 
 JavaDoc
 -------
