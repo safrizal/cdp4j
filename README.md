@@ -8,13 +8,14 @@ It use Google Chrome Remote Debugging Protocol to automate Chrome & Chromium bas
 
 Features
 --------
-* Full page screen capture
+* Supports full capabilities of the Chrome Remote Debugging Protocol (tip-of-tree)
 * Evaluate javascript
 * Invoke JavaScript function
 * Supports native CSS selector engine
 * Supports [Sizzle](http://sizzlejs.com/) selector engine
 * Supports Xpath queries
 * Incognito Browsing (private tab)
+* Full page screen capture
 * Trigger Mouse events (click etc...)
 * Send keys (text, tab, enter etc...)
 * Redirect Browser's log entries (javascript, network, storage etc...) to slf4j
