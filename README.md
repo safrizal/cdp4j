@@ -6,6 +6,8 @@ cdp4j - Chrome Remote Debugging Protocol for Java
 cdp4j is a web-automation library for Java. It can be used for automating the use of web pages and for testing web pages.
 It use Google Chrome Remote Debugging Protocol to automate Chrome & Chromium based browsers.
 
+![WebFolder](https://raw.githubusercontent.com/webfolderio/cdp4j/master/images/logo.png)
+
 Features
 --------
 * Full page screen capture
@@ -56,7 +58,7 @@ Integration with Maven
 2. install the jar into your local Maven repository as follows:
 
 ```bash
-mvn install:install-file -Dfile=cdp4j-1.0.0-sources.jar -DgroupId=io.webfolder -DartifactId=cdp4j -Dversion=1.0.0 -Dpackaging=jar -DgeneratePom=true
+mvn install:install-file -Dfile=cdp4j-1.0.0.jar -DgroupId=io.webfolder -DartifactId=cdp4j -Dversion=1.0.0 -Dpackaging=jar -DgeneratePom=true
 ```
 
 3. install source jar into your local Maven repository as follows:
