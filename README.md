@@ -17,9 +17,9 @@ Features
 * Incognito Browsing (private tab)
 * Trigger Mouse events (click etc...)
 * Send keys (text, tab, enter etc...)
-* Redirect Browser's log entries (javascript, network, storage etc...) to Java
-* Intercept Network
-* Upload file programmatically without third party solutions (does not requires AWT Robot etc.)
+* Redirect Browser's log entries (javascript, network, storage etc...) to slf4j
+* Intercept Network (request & response)
+* Upload file programmatically without third party solutions (does not requires AWT Robot etc...)
 * get & set Element properties
 * Supports Headless Chrome/Chromium
 * Navigate back, forward, stop, reload
@@ -153,7 +153,7 @@ public class Screenshot {
         factory.close();
     }
 }
-```java
+```
 
 Samples
 -------
@@ -182,6 +182,6 @@ Building cdp4j
 `mvn install`
 
 Getting Help
----------------------------------
+--------------------------------------------------------------------------------------------
 cdp4j is a free software but you must **buy** support package for bug & improvment reports.
 Please [contact us](https://webfolder.io/support) for support packages & pricing.
