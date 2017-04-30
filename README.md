@@ -9,7 +9,7 @@ It use Google Chrome Remote Debugging Protocol to automate Chrome & Chromium bas
 Features
 --------
 * Supports full capabilities of the Chrome Remote Debugging Protocol ([tip-of-tree](https://chromedevtools.github.io/debugger-protocol-viewer/tot/))
-* Evaluate javascript
+* Evaluate JavaScript
 * Invoke JavaScript function
 * Supports native CSS selector engine
 * Supports [Sizzle](http://sizzlejs.com/) selector engine
@@ -26,6 +26,7 @@ Features
 * Navigate back, forward, stop, reload
 * clear cache, clear cookies, list cookies
 * set & get values of form elements
+* Supports event handling 
 
 Supported Java Versions
 -----------------------
