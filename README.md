@@ -8,7 +8,7 @@ It use Google Chrome Remote Debugging Protocol to automate Chrome & Chromium bas
 
 Features
 --------
-* Supports full capabilities of the Chrome Remote Debugging Protocol (tip-of-tree)
+* Supports full capabilities of the Chrome Remote Debugging Protocol ([tip-of-tree](https://chromedevtools.github.io/debugger-protocol-viewer/tot/))
 * Evaluate javascript
 * Invoke JavaScript function
 * Supports native CSS selector engine
