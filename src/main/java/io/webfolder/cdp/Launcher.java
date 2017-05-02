@@ -134,6 +134,7 @@ public class Launcher {
         list.add(format("--remote-debugging-address=%s", factory.getHost()));
         list.add("--disable-translate");
         list.add("--disable-extensions");
+        list.add("--no-default-browser-check");
         list.add("--disable-plugin-power-saver");
         list.add("--disable-sync");
         list.add("--no-first-run");
