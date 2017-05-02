@@ -93,6 +93,13 @@ Logging
 -------
 Simple logger for Java (SLF4J) is supported.
 
+Design Principles
+-----------------
+* Avoid external dependencies as much as possible.
+* Support only Chrome/Chromium based browsers.
+* Supports full capabilities of the Chrome Remote Debugging Protocol.
+* Keep the API simple.
+
 CSS Selector Engine
 -------------------
 cdp4j use W3C selector engine which is default selector engine of Chrome/Chromium. Alternatively [Sizzle](http://http://sizzlejs.com) selector engine might be used.
@@ -216,3 +223,4 @@ Getting Help
 
 cdp4j is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. You can support cdp4j development by 
 **buying** support package. Please [contact us](https://webfolder.io/support) for support packages & pricing.
+
