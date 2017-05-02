@@ -7,8 +7,6 @@ environment:
 # Do not build on tags
 skip_tags: true
 
-os: Windows Server 2016
-
 # Fix line endings in Windows. (runs before repo cloning)
 init:
   - git config --global core.autocrlf input
