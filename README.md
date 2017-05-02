@@ -207,5 +207,5 @@ Getting Help
 
 ![WebFolder](https://raw.githubusercontent.com/webfolderio/cdp4j/master/images/logo.png)
 
-cdp4j is a free software but you must **buy** support package for bug & improvment reports.
-Please [contact us](https://webfolder.io/support) for support packages & pricing.
+cdp4j is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. You can support cdp4j development by 
+**buying** support package. Please [contact us](https://webfolder.io/support) for support packages & pricing.
