@@ -2,6 +2,7 @@ cdp4j - Chrome Remote Debugging Protocol for Java
 =================================================
 
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+[![AppVeyor](https://img.shields.io/appveyor/ci/WebFolder/cdp4j.svg?label=windows)](https://ci.appveyor.com/project/WebFolder/cdp4j)
 
 cdp4j is a web-automation library for Java. It can be used for automating the use of web pages and for testing web pages.
 It use Google Chrome Remote Debugging Protocol to automate Chrome & Chromium based browsers.
