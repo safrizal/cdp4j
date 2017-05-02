@@ -70,9 +70,9 @@ public class Launcher {
                 int ecanary = pcanary.waitFor();
                 if (ecanary == 0) {
                     String canary = toString(pcanary.getInputStream()).trim().replace("\"", "");
-                    File executable = new File(canary);
-                    if (executable.exists() && executable.canExecute()) {
-                        return executable.toString();
+                    File executableCanary = new File(canary);
+                    if (executableCanary.exists() && executableCanary.canExecute()) {
+                        return executableCanary.toString();
                     }
                 }
                 // Chrome
@@ -90,7 +90,22 @@ public class Launcher {
                         return executable.toString();
                     }
                 }
-                return null;
+                // Chrome x86
+                Process pchrome86 = getRuntime().exec(new String[] {
+                        "cmd",
+                        "/c",
+                        "echo",
+                        "%programfiles(x86)%\\Google\\Chrome\\Application\\chrome.exe"
+                });
+                int echrome86 = pchrome86.waitFor();
+                if (echrome86 == 0) {
+                    String chromex86 = toString(pchrome86.getInputStream()).trim().replace("\"", "");
+                    File executable86 = new File(chromex86);
+                    if (executable86.exists() && executable86.canExecute()) {
+                        return executable86.toString();
+                    }
+                }
+                throw new CdpException("Unable to find chrome.exe");
             } catch (Throwable e) {
                 // ignore
             }
