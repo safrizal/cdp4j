@@ -93,6 +93,13 @@ Logging
 -------
 Simple logger for Java (SLF4J) is supported.
 
+CSS Selector Engine
+-------------------
+cdp4j use W3C selector engine which is default selector engine of Chrome/Chromium. Alternatively [Sizzle](http://http://sizzlejs.com) selector engine might be used.
+Sizzle is the css selector engine of JQuery and it supports extra selectors like _:has(div)_, _:text_, _contains(text)_ etc.
+Check the [Sizzle.java](https://github.com/webfolderio/cdp4j/blob/master/src/test/java/io/webfolder/cdp/sample/Sizzle.java) for using sizzle with cdp4j.
+
+
 Usage Examples
 --------------
 
