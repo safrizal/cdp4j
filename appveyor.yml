@@ -28,9 +28,10 @@ install:
       $env:Path +=";C:\maven\apache-maven-3.5.0\bin;%JAVA_HOME%\bin"
 
 cache:
-  - "C:\Program Files (x86)\Google\Chrome\"
-  - "C:\maven\"
-  - "C:\Users\appveyor\.m2"
+  - '%PROGRAMFILES%\Google\Chrome'
+  - '%PROGRAMFILES(x86)%\Google\Chrome'
+  - C:\maven
+  - C:\Users\appveyor\.m2
 
 build_script:
   - mvn -q clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
