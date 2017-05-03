@@ -95,6 +95,12 @@ sudo dpkg -i google-chrome*.deb # Might show "errors", fixed by next line
 sudo apt-get install -f
 ```
 
+Test headless Chrome
+
+```bash
+google-chrome --headless --remote-debugging-port=9222 --disable-gpu
+```
+
 JavaDoc
 -------
 [cdp4j api](https://webfolder.io/cdp4j/javadoc/index.html)
