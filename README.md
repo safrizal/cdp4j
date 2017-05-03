@@ -5,11 +5,11 @@ cdp4j - Chrome DevTools Protocol for Java
 [![Travis](https://img.shields.io/travis/webfolderio/cdp4j.svg?label=linux)](https://travis-ci.org/webfolderio/cdp4j) [![AppVeyor](https://img.shields.io/appveyor/ci/WebFolder/cdp4j.svg?label=windows)](https://ci.appveyor.com/project/WebFolder/cdp4j)
 
 cdp4j is a web-automation library for Java. It can be used for automating the use of web pages and for testing web pages.
-It use Google Chrome Remote DevTools Protocol to automate Chrome/Chromium based browsers.
+It use Google Chrome DevTools Protocol to automate Chrome/Chromium based browsers.
 
 Features
 --------
-* Supports full capabilities of the Chrome Remote DevTools Protocol ([tip-of-tree](https://chromedevtools.github.io/debugger-protocol-viewer/tot/))
+* Supports full capabilities of the Chrome DevTools Protocol ([tip-of-tree](https://chromedevtools.github.io/debugger-protocol-viewer/tot/))
 * Evaluate JavaScript
 * Invoke JavaScript function
 * Supports native CSS selector engine
@@ -48,9 +48,9 @@ This library is suitable for use in production systems.
 
 Download
 --------
-[cdp4j-1.0.1.jar](https://webfolder.io/download/cdp4j-1.0.1.jar) - 723 KB
+[https://webfolder.io/download/cdp4j-1.0.1.jar](https://webfolder.io/download/cdp4j-1.0.1.jar) - 723 KB
 
-[cdp4j-1.0.1-sources.jar](https://webfolder.io/download/cdp4j-1.0.1-sources.jar) - 496 KB
+[https://webfolder.io/download/cdp4j-1.0.1-sources.jar](https://webfolder.io/download/cdp4j-1.0.1-sources.jar) - 496 KB
 
 Integration with Maven
 ----------------------
@@ -85,7 +85,7 @@ Headless Mode
 -------------
 cdp4j can be run in "headless" mode using with [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md).
 
-### Install Chrome on Ubuntu
+### Install Chrome on Debian/Ubuntu
 
 ```bash
 # https://askubuntu.com/questions/79280/how-to-install-chrome-browser-properly-via-command-line
@@ -93,6 +93,12 @@ sudo apt-get install libxss1 libappindicator1 libindicator7
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb # Might show "errors", fixed by next line
 sudo apt-get install -f
+```
+
+### Install Chrome on RHEL/CentOS/Fedora
+```bash
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+sudo yum install google-chrome-stable_current_*.rpm
 ```
 
 Test headless Chrome
@@ -113,7 +119,7 @@ Design Principles
 -----------------
 * Avoid external dependencies as much as possible.
 * Support only Chrome/Chromium based browsers.
-* Supports full capabilities of the Chrome Remote DevTools Protocol.
+* Supports full capabilities of the Chrome DevTools Protocol.
 * Keep the API simple.
 
 CSS Selector Engine
