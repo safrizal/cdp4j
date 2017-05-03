@@ -11,8 +11,8 @@ before_install:
  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
  - sudo dpkg -i google-chrome*.deb # Might show "errors", fixed by next line
  - sudo apt-get install -f
-before_script: mvn -q install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+before_script: mvn -q clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
 - google-chrome --version
 - google-chrome --headless --remote-debugging-port=9222 --disable-gpu &
-- mvn -q test
+- mvn clean test
