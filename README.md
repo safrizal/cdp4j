@@ -1,15 +1,15 @@
-cdp4j - Chrome Remote Debugging Protocol for Java
+cdp4j - Chrome Remote DevTools Protocol for Java
 =================================================
 
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 [![Travis](https://img.shields.io/travis/webfolderio/cdp4j.svg?label=linux)](https://travis-ci.org/webfolderio/cdp4j) [![AppVeyor](https://img.shields.io/appveyor/ci/WebFolder/cdp4j.svg?label=windows)](https://ci.appveyor.com/project/WebFolder/cdp4j)
 
 cdp4j is a web-automation library for Java. It can be used for automating the use of web pages and for testing web pages.
-It use Google Chrome Remote Debugging Protocol to automate Chrome & Chromium based browsers.
+It use Google Chrome Remote DevTools Protocol to automate Chrome & Chromium based browsers.
 
 Features
 --------
-* Supports full capabilities of the Chrome Remote Debugging Protocol ([tip-of-tree](https://chromedevtools.github.io/debugger-protocol-viewer/tot/))
+* Supports full capabilities of the Chrome Remote DevTools Protocol ([tip-of-tree](https://chromedevtools.github.io/debugger-protocol-viewer/tot/))
 * Evaluate JavaScript
 * Invoke JavaScript function
 * Supports native CSS selector engine
@@ -48,9 +48,9 @@ This library is suitable for use in production systems.
 
 Download
 --------
-[cdp4j-1.0.0.jar](https://webfolder.io/download/cdp4j-1.0.0.jar) - 722 KB
+[cdp4j-1.0.1.jar](https://webfolder.io/download/cdp4j-1.0.1.jar) - 722 KB
 
-[cdp4j-1.0.0-sources.jar](https://webfolder.io/download/cdp4j-1.0.0-sources.jar) - 495 KB
+[cdp4j-1.0.1-sources.jar](https://webfolder.io/download/cdp4j-1.0.1-sources.jar) - 495 KB
 
 Integration with Maven
 ----------------------
@@ -59,12 +59,12 @@ Integration with Maven
 2. install the jar into your local Maven repository as follows:
 
 ```bash
-mvn install:install-file -Dfile=cdp4j-1.0.0.jar -DgroupId=io.webfolder -DartifactId=cdp4j -Dversion=1.0.0 -Dpackaging=jar -DgeneratePom=true
+mvn install:install-file -Dfile=cdp4j-1.0.1.jar -DgroupId=io.webfolder -DartifactId=cdp4j -Dversion=1.0.1 -Dpackaging=jar -DgeneratePom=true
 ```
 
 3. install source jar into your local Maven repository as follows:
 ```bash
-mvn install:install-file -Dfile=cdp4j-1.0.0-sources.jar -DgroupId=io.webfolder -DartifactId=cdp4j -Dversion=1.0.0 -Dpackaging=jar -DgeneratePom=true -Dclassifier=sources
+mvn install:install-file -Dfile=cdp4j-1.0.1-sources.jar -DgroupId=io.webfolder -DartifactId=cdp4j -Dversion=1.0.1 -Dpackaging=jar -DgeneratePom=true -Dclassifier=sources
 ```
 
 4. Add the following dependency to `pom.xml` file:
@@ -73,7 +73,7 @@ mvn install:install-file -Dfile=cdp4j-1.0.0-sources.jar -DgroupId=io.webfolder -
 <dependency>
     <groupId>io.webfolder</groupId>
     <artifactId>cdp4j</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
@@ -113,7 +113,7 @@ Design Principles
 -----------------
 * Avoid external dependencies as much as possible.
 * Support only Chrome/Chromium based browsers.
-* Supports full capabilities of the Chrome Remote Debugging Protocol.
+* Supports full capabilities of the Chrome Remote DevTools Protocol.
 * Keep the API simple.
 
 CSS Selector Engine

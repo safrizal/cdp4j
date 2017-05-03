@@ -3,14 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.webfolder</groupId>
     <artifactId>cdp4j</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <licenses>
         <license>
             <name>The MIT License</name>
             <url>https://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
-    <description>cdp4j - Chrome Debugging Protocol for Java</description>
+    <description>cdp4j - Chrome DevTools Protocol for Java</description>
     <inceptionYear>2017</inceptionYear>
     <organization>
         <name>WebFolder OÜ</name>
@@ -62,7 +62,7 @@
                             <manifestEntries>
                                 <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
                                 <Bundle-Name>${project.name}</Bundle-Name>
-                                <Bundle-Description>cdp4j - Chrome Debugging Protocol for Java</Bundle-Description>
+                                <Bundle-Description>cdp4j - Chrome DevTools Protocol for Java</Bundle-Description>
                                 <Bundle-Version>${project.version}</Bundle-Version>
                                 <Built-By>WebFolder OÜ</Built-By>
                             </manifestEntries>
