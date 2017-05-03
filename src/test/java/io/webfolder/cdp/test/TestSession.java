@@ -61,6 +61,8 @@ public class TestSession {
 
     private static LoggerContext loggerContext;
 
+    private static String os = System.getProperty("os.name").toLowerCase();
+
     @BeforeClass
     @SuppressWarnings("unchecked")
     public static void init() {
@@ -73,6 +75,12 @@ public class TestSession {
 
         Logger logger = loggerContext.getLogger("cdp4j.flow");
         logger.addAppender((Appender<ILoggingEvent>) appender);
+
+        List<String> arguments = new ArrayList<>();
+        if (os.indexOf("nix") >= 0) {
+            arguments.add("--headless");
+            arguments.add("--disable-gpu");
+        }
 
         factory = new Launcher().launch();
 
