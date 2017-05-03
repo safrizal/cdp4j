@@ -30,7 +30,7 @@ cache:
   - C:\Users\appveyor\.m2
 
 build_script:
-  - mvn -q clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvn -q clean package -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 test_script:
   - wmic datafile where name="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" get Version /value
