@@ -13,10 +13,12 @@ init:
 
 # Install scripts--runs after repo cloning
 install:
-  - choco install -y googlechrome
   - ps: |
       Add-Type -AssemblyName System.IO.Compression.FileSystem
-      if (!(Test-Path -Path "C:\maven" )) {
+      if (!(Test-Path -Path "C:\Program Files (x86)\Google")) {
+        choco install -y googlechrome
+      }
+      if (!(Test-Path -Path "C:\maven")) {
         (new-object System.Net.WebClient).DownloadFile(
           'http://www.us.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.zip',
           'C:\maven-bin.zip'
