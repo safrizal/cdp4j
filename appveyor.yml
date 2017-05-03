@@ -28,7 +28,7 @@ install:
       $env:Path +=";C:\maven\apache-maven-3.5.0\bin;%JAVA_HOME%\bin"
 
 cache:
-  - '%PROGRAMFILES(x86)%\Google\Chrome'
+  - '%PROGRAMFILES(x86)%\Google'
   - C:\maven
   - C:\Users\appveyor\.m2
 
@@ -36,6 +36,6 @@ build_script:
   - mvn -q clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 test_script:
-  - '%PROGRAMFILES(x86)%\Google\Chrome\Application\chrome.exe --no-default-browser-check --no-first-run --disable-translate --remote-debugging-port=9222'
+  - '"%PROGRAMFILES(x86)%\Google\Chrome\Application\chrome.exe" --no-default-browser-check --no-first-run --disable-translate --remote-debugging-port=9222'
   - wmic datafile where name="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" get Version /value
   - mvn clean test
