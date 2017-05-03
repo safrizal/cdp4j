@@ -36,6 +36,5 @@ build_script:
   - mvn -q clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 test_script:
-  - '"%PROGRAMFILES(x86)%\Google\Chrome\Application\chrome.exe" --no-default-browser-check --no-first-run --disable-translate --remote-debugging-port=9222'
   - wmic datafile where name="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" get Version /value
   - mvn clean test
