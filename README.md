@@ -1,11 +1,11 @@
-cdp4j - Chrome Remote DevTools Protocol for Java
+cdp4j - Chrome DevTools Protocol for Java
 =================================================
 
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 [![Travis](https://img.shields.io/travis/webfolderio/cdp4j.svg?label=linux)](https://travis-ci.org/webfolderio/cdp4j) [![AppVeyor](https://img.shields.io/appveyor/ci/WebFolder/cdp4j.svg?label=windows)](https://ci.appveyor.com/project/WebFolder/cdp4j)
 
 cdp4j is a web-automation library for Java. It can be used for automating the use of web pages and for testing web pages.
-It use Google Chrome Remote DevTools Protocol to automate Chrome & Chromium based browsers.
+It use Google Chrome Remote DevTools Protocol to automate Chrome/Chromium based browsers.
 
 Features
 --------
@@ -48,9 +48,9 @@ This library is suitable for use in production systems.
 
 Download
 --------
-[cdp4j-1.0.1.jar](https://webfolder.io/download/cdp4j-1.0.1.jar) - 722 KB
+[cdp4j-1.0.1.jar](https://webfolder.io/download/cdp4j-1.0.1.jar) - 723 KB
 
-[cdp4j-1.0.1-sources.jar](https://webfolder.io/download/cdp4j-1.0.1-sources.jar) - 495 KB
+[cdp4j-1.0.1-sources.jar](https://webfolder.io/download/cdp4j-1.0.1-sources.jar) - 496 KB
 
 Integration with Maven
 ----------------------
