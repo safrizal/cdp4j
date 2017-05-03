@@ -12,4 +12,6 @@ before_install:
  - sudo dpkg -i google-chrome*.deb # Might show "errors", fixed by next line
  - sudo apt-get install -f
 before_script: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-script: mvn package
+script:
+- google-chrome --version
+- mvn package
