@@ -33,5 +33,3 @@ focus("[type=text]")
 userAgent("my browser")
 evaluate("navigator.userAgent"): my browser
 callFunction("myfunc"): void
-close()
-close()

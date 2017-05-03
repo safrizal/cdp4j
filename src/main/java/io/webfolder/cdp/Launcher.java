@@ -60,50 +60,18 @@ public class Launcher {
         boolean windows = os.startsWith("windows");
         if (windows) {
             try {
-                // Chrome Canary
-                Process pcanary = getRuntime().exec(new String[] {
-                        "cmd",
-                        "/c",
-                        "echo",
-                        "%localappdata%\\Google\\Chrome SxS\\Application\\chrome.exe"
-                });
-                int ecanary = pcanary.waitFor();
-                if (ecanary == 0) {
-                    String canary = toString(pcanary.getInputStream()).trim().replace("\"", "");
-                    File executableCanary = new File(canary);
-                    if (executableCanary.exists() && executableCanary.canExecute()) {
-                        return executableCanary.toString();
-                    }
-                }
-                // Chrome
-                Process pchrome = getRuntime().exec(new String[] {
-                        "cmd",
-                        "/c",
-                        "echo",
-                        "%programfiles%\\Google\\Chrome\\Application\\chrome.exe"
-                });
-                int echrome = pchrome.waitFor();
-                if (echrome == 0) {
-                    String chrome = toString(pchrome.getInputStream()).trim().replace("\"", "");
-                    File executable = new File(chrome);
-                    if (executable.exists() && executable.canExecute()) {
-                        return executable.toString();
-                    }
-                }
-                // Chrome x86
-                Process pchrome86 = getRuntime().exec(new String[] {
-                        "cmd",
-                        "/c",
-                        "echo",
-                        "%programfiles(x86)%\\Google\\Chrome\\Application\\chrome.exe"
-                });
-                int echrome86 = pchrome86.waitFor();
-                if (echrome86 == 0) {
-                    String chromex86 = toString(pchrome86.getInputStream()).trim().replace("\"", "");
-                    File executable86 = new File(chromex86);
-                    if (executable86.exists() && executable86.canExecute()) {
-                        return executable86.toString();
-                    }
+                for (String path : getChromeWinPaths()) {
+                    final Process process = getRuntime().exec(new String[] {
+                            "cmd", "/c", "echo", path
+                    });
+                    final int exitCode = process.waitFor();
+                    if (exitCode == 0) {
+                        final String location = toString(process.getInputStream()).trim().replace("\"", "");
+                        final File chrome = new File(location);
+                        if (chrome.exists() && chrome.canExecute()) {
+                            return chrome.toString();
+                        }
+                    }                    
                 }
                 throw new CdpException("Unable to find chrome.exe");
             } catch (Throwable e) {
@@ -115,7 +83,14 @@ public class Launcher {
         return null;
     }
 
-    
+    protected List<String> getChromeWinPaths() {
+        return asList(
+                "%localappdata%\\Google\\Chrome SxS\\Application\\chrome.exe", // Chrome Canary
+                "%programfiles%\\Google\\Chrome\\Application\\chrome.exe",     // Chrome Stable 64-bit
+                "%programfiles(x86)%\\Google\\Chrome\\Application\\chrome.exe" // Chrome Stable 32-bit
+        );
+    }
+
     public SessionFactory launch() {
         return launch(new String[] { });
     }

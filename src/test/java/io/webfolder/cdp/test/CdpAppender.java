@@ -35,8 +35,8 @@ public class CdpAppender extends AppenderBase {
 
     private List<String> logEntries = new CopyOnWriteArrayList<>();
 
-    private List<String> ignoredMethods = asList(
-        "wait"
+    private List<String> ignoredConsoleEntries = asList(
+        "wait", "close", "SW registered"
     );
 
     @Override
@@ -55,7 +55,7 @@ public class CdpAppender extends AppenderBase {
         int end = logEntry.indexOf("(");
         if (end > 0) {
             String methodName = logEntry.substring(0, end);
-            if (ignoredMethods.contains(methodName)) {
+            if (ignoredConsoleEntries.contains(methodName)) {
                 return;
             }
         }
