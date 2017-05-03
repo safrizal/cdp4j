@@ -85,7 +85,7 @@ Headless Mode
 -------------
 cdp4j can be run in "headless" mode using with [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md).
 
-## Install Chrome on Ubuntu
+### Install Chrome on Ubuntu
 
 ```bash
 # https://askubuntu.com/questions/79280/how-to-install-chrome-browser-properly-via-command-line
@@ -93,6 +93,12 @@ sudo apt-get install libxss1 libappindicator1 libindicator7
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb # Might show "errors", fixed by next line
 sudo apt-get install -f
+```
+
+Test headless Chrome
+
+```bash
+google-chrome --headless --remote-debugging-port=9222 --disable-gpu
 ```
 
 JavaDoc
