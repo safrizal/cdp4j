@@ -1,8 +1,15 @@
+sudo: required
 language: java
 jdk: oraclejdk8
+dist: trusty 
 branches: master
 cache:
   directories:
   - $HOME/.m2
+before_install:  
+ - sudo apt-get install libxss1 libappindicator1 libindicator7
+ - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+ - sudo dpkg -i google-chrome*.deb # Might show "errors", fixed by next line
+ - sudo apt-get install -f
 before_script: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script: mvn package
