@@ -11,11 +11,9 @@ skip_tags: true
 init:
   - git config --global core.autocrlf input
 
-# Install Chrome
-choco install -y googlechrome
-
 # Install scripts--runs after repo cloning
 install:
+  - choco install -y googlechrome
   - ps: |
       Add-Type -AssemblyName System.IO.Compression.FileSystem
       if (!(Test-Path -Path "C:\maven" )) {
