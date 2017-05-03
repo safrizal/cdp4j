@@ -11,9 +11,8 @@ skip_tags: true
 init:
   - git config --global core.autocrlf input
 
-# choco install -y googlechrome
-
-# Chromium download link: https://download-chromium.appspot.com/?platform=Win&type=snapshots
+# Install Chrome
+choco install -y googlechrome
 
 # Install scripts--runs after repo cloning
 install:
@@ -26,17 +25,10 @@ install:
         )
         [System.IO.Compression.ZipFile]::ExtractToDirectory("C:\maven-bin.zip", "C:\maven")
       }
-      if (!(Test-Path -Path "C:\chrome-win32" )) {
-        (new-object System.Net.WebClient).DownloadFile(
-          'https://commondatastorage.googleapis.com/chromium-browser-snapshots/Win/468944/chrome-win32.zip',
-          'C:\chrome-win32.zip'
-        )
-        [System.IO.Compression.ZipFile]::ExtractToDirectory("C:\chrome-win32.zip", "C:\")
-      }
       $env:Path +=";C:\maven\apache-maven-3.5.0\bin;%JAVA_HOME%\bin"
 
 cache:
-  - C:\chrome-win32\
+  - C:\Program Files (x86)\Google\Chrome\
   - C:\maven\
   - C:\Users\appveyor\.m2
 
@@ -44,6 +36,5 @@ build_script:
   - mvn -q clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 test_script:
-  - wmic datafile where name="C:\\chrome-win32\\chrome.exe" get Version /value
-  - C:\chrome-win32\chrome.exe --no-default-browser-check --no-first-run --disable-translate --remote-debugging-port=9222 --disable-gpu
+  - wmic datafile where name="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" get Version /value
   - mvn clean test
