@@ -1,17 +1,28 @@
 sudo: required
+
 language: java
+
 jdk: oraclejdk8
+
 dist: trusty 
+
 branches: master
+
 cache:
   directories:
   - $HOME/.m2
+  - $HOME/chrome-archive
+
 before_install:  
  - sudo apt-get install libxss1 libappindicator1 libindicator7
- - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
- - sudo dpkg -i google-chrome*.deb # Might show "errors", fixed by next line
+ - mkdir -p chrome-archive
+ - wget -qnc https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O chrome-archive/google-chrome-stable_current_amd64.deb
+ - sudo dpkg -i chrome-archive/google-chrome*.deb # Might show "errors", fixed by next line
  - sudo apt-get install -f
-before_script: mvn -q clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+before_script:
+ - mvn -q clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
 script:
 - google-chrome --version
 - google-chrome --headless --remote-debugging-port=9222 --disable-gpu &
