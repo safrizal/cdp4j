@@ -36,7 +36,7 @@ public class CdpAppender extends AppenderBase {
     private List<String> logEntries = new CopyOnWriteArrayList<>();
 
     private List<String> ignoredConsoleEntries = asList(
-        "wait", "close", "SW registered"
+        "wait", "close", "waitDocumentReady", "SW registered"
     );
 
     @Override
