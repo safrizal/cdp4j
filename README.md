@@ -85,7 +85,7 @@ Headless Mode
 -------------
 cdp4j can be run in "headless" mode using with [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md).
 
-## Install Chrome on Ubuntu
+### Install Chrome on Ubuntu
 
 ```bash
 # https://askubuntu.com/questions/79280/how-to-install-chrome-browser-properly-via-command-line
