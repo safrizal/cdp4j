@@ -40,7 +40,6 @@ public class IncognitoBrowsing {
         firstSession.navigate("https://httpbin.org/cookies/set?SESSION_ID=1");
         firstSession.wait(500);
         String session1 = (String) firstSession.evaluate("window.document.body.textContent");
-        firstSession.close();
         factory.disposeBrowserContext(firstContext);
 
         System.out.println(session1);
@@ -51,10 +50,10 @@ public class IncognitoBrowsing {
         secondSession.navigate("https://httpbin.org/cookies");
         firstSession.wait(500);
         String session2 = (String) secondSession.evaluate("window.document.body.textContent");
-        secondSession.close();
         factory.disposeBrowserContext(secondContext);
 
         System.out.println(session2);
+
 
         factory.close();
     }
