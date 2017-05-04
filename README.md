@@ -238,6 +238,10 @@ Building cdp4j
 --------------
 `mvn install`
 
+How it is tested
+----------------
+cdp4j is regularly built and tested on [Travis CI](https://travis-ci.org/webfolderio/cdp4j) and [AppVeyor](https://ci.appveyor.com/project/WebFolder/cdp4j).
+
 Getting Help
 --------------------------------------------------------------------------------------------
 
