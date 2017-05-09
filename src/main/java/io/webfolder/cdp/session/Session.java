@@ -34,7 +34,6 @@ import static java.lang.Boolean.TRUE;
 import static java.lang.Math.floor;
 import static java.lang.String.format;
 import static java.lang.String.valueOf;
-import static java.lang.Thread.sleep;
 import static java.lang.ThreadLocal.withInitial;
 import static java.lang.reflect.Proxy.newProxyInstance;
 import static java.util.Locale.ENGLISH;
@@ -45,6 +44,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Predicate;
 
 import com.google.gson.Gson;
@@ -107,6 +108,8 @@ public class Session implements AutoCloseable,
     private String frameId;
 
     private Command command;
+
+    private final ReentrantLock lock = new ReentrantLock(true);
 
     private static final ThreadLocal<Boolean> ENABLE_ENTRY_EXIT_LOG = 
                                                     withInitial(() -> { return TRUE; });
@@ -361,11 +364,20 @@ public class Session implements AutoCloseable,
     }
 
     public Session wait(int timeout) {
-        try {
-            logEntry("wait", timeout + "ms");
-            sleep(timeout);
-        } catch (InterruptedException e) {
-            throw new CdpException(e);
+        if ( lock.tryLock() ) {
+            Condition condition = lock.newCondition();
+            try {
+                logEntry("wait", timeout + "ms");
+                condition.await(timeout, MILLISECONDS);
+            } catch (InterruptedException e) {
+                throw new CdpException(e);
+            } finally {
+                if (lock.isLocked()) {
+                    lock.unlock();
+                }
+            }
+        } else {
+            throw new CdpException("Unable to acquire lock");
         }
         return getThis();
     }
