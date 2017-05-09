@@ -35,14 +35,14 @@ public class ExecutionContextCreated {
     private ExecutionContextDescription context;
 
     /**
-     * A newly created execution contex.
+     * A newly created execution context.
      */
     public ExecutionContextDescription getContext() {
         return context;
     }
 
     /**
-     * A newly created execution contex.
+     * A newly created execution context.
      */
     public void setContext(ExecutionContextDescription context) {
         this.context = context;

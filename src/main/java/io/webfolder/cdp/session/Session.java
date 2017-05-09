@@ -364,7 +364,7 @@ public class Session implements AutoCloseable,
     }
 
     public Session wait(int timeout) {
-        if ( lock.tryLock() ) {
+        if (lock.tryLock()) {
             Condition condition = lock.newCondition();
             try {
                 logEntry("wait", timeout + "ms");

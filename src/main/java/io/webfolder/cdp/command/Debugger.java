@@ -103,7 +103,7 @@ public interface Debugger {
      * Returns possible locations for breakpoint. scriptId in start and end range locations should be the same.
      * 
      * @param start Start of range to search possible breakpoint locations in.
-     * @param end End of range to search possible breakpoint locations in (excluding). When not specifed, end of scripts is used as end of range.
+     * @param end End of range to search possible breakpoint locations in (excluding). When not specified, end of scripts is used as end of range.
      * @param restrictToFunction Only consider locations which are in the same (non-nested) function as start.
      * 
      * @return List of the possible breakpoint locations.

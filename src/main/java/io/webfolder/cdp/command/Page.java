@@ -258,13 +258,28 @@ public interface Page {
             @Experimental @Optional Boolean fromSurface);
 
     /**
-     * Print page as pdf.
+     * Print page as PDF.
+     * 
+     * @param landscape Paper orientation. Defaults to false.
+     * @param displayHeaderFooter Display header and footer. Defaults to false.
+     * @param printBackground Print background graphics. Defaults to false.
+     * @param scale Scale of the webpage rendering. Defaults to 1.
+     * @param paperWidth Paper width in inches. Defaults to 8.5 inches.
+     * @param paperHeight Paper height in inches. Defaults to 11 inches.
+     * @param marginTop Top margin in inches. Defaults to 1cm (~0.4 inches).
+     * @param marginBottom Bottom margin in inches. Defaults to 1cm (~0.4 inches).
+     * @param marginLeft Left margin in inches. Defaults to 1cm (~0.4 inches).
+     * @param marginRight Right margin in inches. Defaults to 1cm (~0.4 inches).
+     * @param pageRanges Paper ranges to print, e.g., '1-5, 8, 11-13'. Defaults to the empty string, which means print all pages.
      * 
      * @return Base64-encoded pdf data.
      */
     @Experimental
     @Returns("data")
-    byte[] printToPDF();
+    byte[] printToPDF(@Optional Boolean landscape, @Optional Boolean displayHeaderFooter,
+            @Optional Boolean printBackground, @Optional Double scale, @Optional Double paperWidth,
+            @Optional Double paperHeight, @Optional Double marginTop, @Optional Double marginBottom,
+            @Optional Double marginLeft, @Optional Double marginRight, @Optional String pageRanges);
 
     /**
      * Starts sending each frame using the <tt>screencastFrame</tt> event.
@@ -396,6 +411,15 @@ public interface Page {
     @Experimental
     @Returns("data")
     byte[] captureScreenshot();
+
+    /**
+     * Print page as PDF.
+     * 
+     * @return Base64-encoded pdf data.
+     */
+    @Experimental
+    @Returns("data")
+    byte[] printToPDF();
 
     /**
      * Starts sending each frame using the <tt>screencastFrame</tt> event.

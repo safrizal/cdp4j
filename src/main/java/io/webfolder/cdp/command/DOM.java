@@ -22,8 +22,6 @@
  */
 package io.webfolder.cdp.command;
 
-import java.util.List;
-
 import io.webfolder.cdp.annotation.Domain;
 import io.webfolder.cdp.annotation.Experimental;
 import io.webfolder.cdp.annotation.Optional;
@@ -32,6 +30,7 @@ import io.webfolder.cdp.type.dom.BoxModel;
 import io.webfolder.cdp.type.dom.Node;
 import io.webfolder.cdp.type.dom.PerformSearchResult;
 import io.webfolder.cdp.type.runtime.RemoteObject;
+import java.util.List;
 
 /**
  * This domain exposes DOM read/write operations

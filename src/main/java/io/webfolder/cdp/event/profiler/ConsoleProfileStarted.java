@@ -27,7 +27,7 @@ import io.webfolder.cdp.annotation.EventName;
 import io.webfolder.cdp.type.debugger.Location;
 
 /**
- * Sent when new profile recodring is started using console
+ * Sent when new profile recording is started using console
  * profile() call
  */
 @Domain("Profiler")
