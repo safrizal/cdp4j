@@ -2,7 +2,7 @@ cdp4j - Chrome DevTools Protocol for Java
 =================================================
 
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
-[![Travis](https://img.shields.io/travis/webfolderio/cdp4j.svg?label=linux)](https://travis-ci.org/webfolderio/cdp4j) [![AppVeyor](https://img.shields.io/appveyor/ci/WebFolder/cdp4j.svg?label=windows)](https://ci.appveyor.com/project/WebFolder/cdp4j)
+[![Travis](https://img.shields.io/travis/webfolderio/cdp4j.svg?label=linux)](https://travis-ci.org/webfolderio/cdp4j) [![AppVeyor](https://img.shields.io/appveyor/ci/WebFolder/cdp4j.svg?label=windows)](https://ci.appveyor.com/project/WebFolder/cdp4j) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/66358e2e3fc1495aaad32e3bf7dc99bd)](https://www.codacy.com/app/WebFolder/cdp4j?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=webfolderio/cdp4j&amp;utm_campaign=Badge_Grade)
 
 cdp4j is a web-automation library for Java. It can be used for automating the use of web pages and for testing web pages.
 It use Google Chrome DevTools Protocol to automate Chrome/Chromium based browsers.
@@ -237,6 +237,10 @@ Samples
 Building cdp4j
 --------------
 `mvn install`
+
+How it is tested
+----------------
+cdp4j is regularly built and tested on [Travis CI](https://travis-ci.org/webfolderio/cdp4j) and [AppVeyor](https://ci.appveyor.com/project/WebFolder/cdp4j).
 
 Getting Help
 --------------------------------------------------------------------------------------------
