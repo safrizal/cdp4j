@@ -93,6 +93,7 @@ public class TestSession {
         factory.close();
     }
 
+    @SuppressWarnings("unchecked")
     @Test
     public void test() {
         session.activate();
@@ -188,6 +189,15 @@ public class TestSession {
         session.setVariable("xyz", map);
 
         assertEquals("value1", session.getVariable("xyz", Map.class).get("key1"));
+
+        session.evaluate("window.myFunc2 = function(myMap) { return myMap; }");
+
+        map.clear();
+        map.put("foo", "bar");
+        map = session.callFunction("myFunc2", Map.class, map);
+
+        assertEquals(1, map.size());
+        assertEquals("bar", map.get("foo"));
 
         session.close();
 

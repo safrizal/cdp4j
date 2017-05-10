@@ -191,7 +191,13 @@ public interface JavaScript {
             String json = valueOf(func.getResult().getValue());
             JsonObject object = getThis().getGson().fromJson(json, JsonObject.class);
             JsonElement result = object.get("result");
-            value = getThis().getGson().fromJson(result, returnType);
+            if (getThis().isPrimitive(returnType)) {
+                value = getThis().getGson().fromJson(result, returnType);
+            } else {
+                if (result.isJsonPrimitive()) {
+                    value = getThis().getGson().fromJson(result.getAsString(), returnType);
+                }
+            }
         } else if (ObjectType.Undefined.equals(func.getResult().getType())) {
             value = void.class;
         }

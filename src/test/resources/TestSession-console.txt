@@ -34,3 +34,5 @@ userAgent("my browser")
 evaluate("navigator.userAgent"): my browser
 callFunction("myfunc"): void
 evaluate("var foo = { }; foo.name = 'bar';"): bar
+evaluate("window.myFunc2 = function(myMap) { return myMap; }"): null
+callFunction("myFunc2", {foo=bar}"): {foo=bar}
