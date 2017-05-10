@@ -34,7 +34,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -170,6 +172,22 @@ public class TestSession {
         assertTrue(session.getQueryString().isEmpty());
 
         session.callFunction("myfunc");
+
+        session.evaluate("var foo = { }; foo.name = 'bar';");
+
+        String name = session.getVariable("foo.name", String.class);
+
+        assertEquals("bar", name);
+
+        session.setVariable("foo.age", 1);
+
+        assertEquals(1, session.getVariable("foo.age", Integer.class).intValue());
+
+        Map<String, Object> map = new LinkedHashMap<>();
+        map.put("key1", "value1");
+        session.setVariable("xyz", map);
+
+        assertEquals("value1", session.getVariable("xyz", Map.class).get("key1"));
 
         session.close();
 

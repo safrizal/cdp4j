@@ -519,4 +519,29 @@ public class Session implements AutoCloseable,
     void enableFlowLog() {
         ENABLE_ENTRY_EXIT_LOG.set(TRUE);
     }
+
+    boolean isPrimitive(Class<?> klass) {
+        if (String.class.equals(klass)) {
+            return true;
+        } else if (boolean.class.equals(klass) || Boolean.class.equals(klass)) {
+            return true;
+        } else if (void.class.equals(klass) || Void.class.equals(klass)) {
+            return true;
+        } else if (int.class.equals(klass) || Integer.class.equals(klass)) {
+            return true;
+        } else if (double.class.equals(klass) || Double.class.equals(klass)) {
+            return true;
+        } else if (long.class.equals(klass) || Long.class.equals(klass)) {
+            return true;
+        } else if (float.class.equals(klass) || Float.class.equals(klass)) {
+            return true;
+        } else if (char.class.equals(klass) || Character.class.equals(klass)) {
+            return true;
+        } else if (byte.class.equals(klass) || Byte.class.equals(klass)) {
+            return true;
+        } else if (short.class.equals(klass) || Short.class.equals(klass)) {
+            return true;
+        }
+        return false;
+    }
 }

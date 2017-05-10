@@ -33,3 +33,4 @@ focus("[type=text]")
 userAgent("my browser")
 evaluate("navigator.userAgent"): my browser
 callFunction("myfunc"): void
+evaluate("var foo = { }; foo.name = 'bar';"): bar
