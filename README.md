@@ -181,6 +181,8 @@ public class Screenshot {
         try (Session session = factory.create()) {
             session.navigate("https://news.ycombinator.com");
             session.waitDocumentReady();
+            // activate the tab/session before capturing the screenshot
+            session.activate();
             byte[] data = session.captureScreenshot();
             write(file, data);
         }
