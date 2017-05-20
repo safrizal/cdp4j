@@ -22,6 +22,9 @@
  */
 package io.webfolder.cdp.command;
 
+import java.util.List;
+import java.util.Map;
+
 import io.webfolder.cdp.annotation.Domain;
 import io.webfolder.cdp.annotation.Experimental;
 import io.webfolder.cdp.annotation.Optional;
@@ -30,8 +33,6 @@ import io.webfolder.cdp.type.network.ConnectionType;
 import io.webfolder.cdp.type.network.Cookie;
 import io.webfolder.cdp.type.network.CookieSameSite;
 import io.webfolder.cdp.type.network.GetResponseBodyResult;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Network domain allows tracking network activities of the page

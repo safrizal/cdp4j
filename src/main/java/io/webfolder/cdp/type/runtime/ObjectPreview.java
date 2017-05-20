@@ -22,11 +22,12 @@
  */
 package io.webfolder.cdp.type.runtime;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import io.webfolder.cdp.annotation.Experimental;
 import io.webfolder.cdp.type.constant.ObjectSubtypeHint;
 import io.webfolder.cdp.type.constant.ObjectType;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Object containing abbreviated remote object value

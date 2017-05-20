@@ -22,6 +22,8 @@
  */
 package io.webfolder.cdp.command;
 
+import java.util.List;
+
 import io.webfolder.cdp.annotation.Domain;
 import io.webfolder.cdp.annotation.Experimental;
 import io.webfolder.cdp.annotation.Optional;
@@ -37,7 +39,6 @@ import io.webfolder.cdp.type.page.GetLayoutMetricsResult;
 import io.webfolder.cdp.type.page.GetNavigationHistoryResult;
 import io.webfolder.cdp.type.page.GetResourceContentResult;
 import io.webfolder.cdp.type.page.NavigationResponse;
-import java.util.List;
 
 /**
  * Actions and events related to the inspected page belong to the page domain

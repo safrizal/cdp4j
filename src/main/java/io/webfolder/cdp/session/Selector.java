@@ -22,10 +22,10 @@
  */
 package io.webfolder.cdp.session;
 
-import static java.lang.String.*;
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 import static java.lang.String.format;
+import static java.lang.String.valueOf;
 
 import java.util.ArrayList;
 import java.util.List;

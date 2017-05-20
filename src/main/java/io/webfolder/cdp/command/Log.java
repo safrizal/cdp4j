@@ -22,10 +22,11 @@
  */
 package io.webfolder.cdp.command;
 
+import java.util.List;
+
 import io.webfolder.cdp.annotation.Domain;
 import io.webfolder.cdp.annotation.Experimental;
 import io.webfolder.cdp.type.log.ViolationSetting;
-import java.util.List;
 
 /**
  * Provides access to log entries

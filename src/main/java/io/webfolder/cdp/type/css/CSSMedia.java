@@ -22,9 +22,10 @@
  */
 package io.webfolder.cdp.type.css;
 
-import io.webfolder.cdp.type.constant.CSSMediaSource;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.webfolder.cdp.type.constant.CSSMediaSource;
 
 /**
  * CSS media rule descriptor

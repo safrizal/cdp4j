@@ -22,9 +22,8 @@
  */
 package io.webfolder.cdp.session;
 
-import static java.lang.String.valueOf;
 import static java.lang.Boolean.TRUE;
-
+import static java.lang.String.valueOf;
 import static java.util.Collections.emptyMap;
 
 import java.util.LinkedHashMap;

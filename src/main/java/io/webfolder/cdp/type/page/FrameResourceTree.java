@@ -22,9 +22,10 @@
  */
 package io.webfolder.cdp.type.page;
 
-import io.webfolder.cdp.annotation.Experimental;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.webfolder.cdp.annotation.Experimental;
 
 /**
  * Information about the Frame hierarchy along with their cached resources

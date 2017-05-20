@@ -22,9 +22,10 @@
  */
 package io.webfolder.cdp.type.css;
 
-import io.webfolder.cdp.annotation.Experimental;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.webfolder.cdp.annotation.Experimental;
 
 /**
  * A subset of the full ComputedStyle as defined by the request whitelist

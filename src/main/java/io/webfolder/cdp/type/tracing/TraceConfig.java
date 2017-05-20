@@ -22,9 +22,10 @@
  */
 package io.webfolder.cdp.type.tracing;
 
-import io.webfolder.cdp.type.constant.TraceRecordMode;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.webfolder.cdp.type.constant.TraceRecordMode;
 
 public class TraceConfig {
     private TraceRecordMode recordMode;

@@ -28,8 +28,8 @@ import java.util.concurrent.CountDownLatch;
 
 import com.google.gson.JsonElement;
 
-import io.webfolder.cdp.exception.CommandException;
 import io.webfolder.cdp.exception.CdpException;
+import io.webfolder.cdp.exception.CommandException;
 
 class WSContext {
 

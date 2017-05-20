@@ -22,9 +22,10 @@
  */
 package io.webfolder.cdp.type.profiler;
 
-import io.webfolder.cdp.annotation.Experimental;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.webfolder.cdp.annotation.Experimental;
 
 /**
  * Coverage data for a JavaScript function

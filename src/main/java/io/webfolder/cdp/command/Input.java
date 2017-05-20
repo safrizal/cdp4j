@@ -22,6 +22,8 @@
  */
 package io.webfolder.cdp.command;
 
+import java.util.List;
+
 import io.webfolder.cdp.annotation.Domain;
 import io.webfolder.cdp.annotation.Experimental;
 import io.webfolder.cdp.annotation.Optional;
@@ -31,7 +33,6 @@ import io.webfolder.cdp.type.constant.MouseEventType;
 import io.webfolder.cdp.type.constant.TouchEventType;
 import io.webfolder.cdp.type.input.GestureSourceType;
 import io.webfolder.cdp.type.input.TouchPoint;
-import java.util.List;
 
 @Domain("Input")
 public interface Input {
