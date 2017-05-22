@@ -133,9 +133,9 @@ public class Session implements AutoCloseable,
         this.eventListeners   = eventListeners;
         this.webSocket        = webSocket;
         this.log              = loggerFactory.getLogger("cdp4j.session");
-        this.logFlow     = loggerFactory.getLogger("cdp4j.flow");
+        this.logFlow          = loggerFactory.getLogger("cdp4j.flow");
         this.gson             = gson;
-        this.command            = new Command(this);
+        this.command          = new Command(this);
     }
 
     public String getId() {
@@ -363,6 +363,15 @@ public class Session implements AutoCloseable,
         return data;
     }
 
+    /**
+     * Causes the current thread to wait until waiting time elapses.
+     * 
+     * @param timeout the maximum time to wait in milliseconds
+     * 
+     * @throws CdpException if the session held by another thread at the time of invocation.
+     * 
+     * @return this
+     */
     public Session wait(int timeout) {
         if (lock.tryLock()) {
             Condition condition = lock.newCondition();
